@@ -32,4 +32,7 @@ OPERATOR
 let po=5;
   // it is used to first increment then print
 console.log(++op)
+ let oso=5;
+ console.log(oso++) // first print then increment
+
 
