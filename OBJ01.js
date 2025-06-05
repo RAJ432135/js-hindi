@@ -86,4 +86,25 @@ console.log(Object.values(tinderuser))
 console.log(Object.entries(tinderuser))
 console.log(tinderuser.hasOwnProperty("email1"))
 
+// distructure in object
+const course={
+  coursename:"c++",
+  amount:999,
+  instructorname:"shivam rajput",
+
+
+}
+const {instructorname:instructor}=course
+console.log(instructor)
+
+// json api format
+{
+ // "name":"shivam",
+ // "id":"456"
+}
+[
+  {},
+  {},
+]
+
 
