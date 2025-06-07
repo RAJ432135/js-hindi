@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Chai Or Code</title>
+</head>
+<body style="background-color: #212121 ; color: white;">
+
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+    
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    console.log(parent) /*output <div class="day">tuesday</div> all*/
+    console.log(parent.children) /*html colection HTMLCollection(4) [div.day, div.day, div.day, div.day]
+0
+: 
+div.day
+1
+: 
+div.day
+2
+: 
+div.day
+3
+: 
+div.day
+length
+: 
+4*/
+    console.log(parent.children[0])//output monday
+    console.log(parent.children[1].innerHTML="SUNDAY") //change using ineerHtml
+    console.log(parent.children[1])
+
+    // loop print children
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerHTML);
+    }
+    //output
+/*monday
+ SUNDAY
+wednesday
+ thursday */
+ 
+ parent.children[1].style.color="orange";
+ console.log(parent.firstElementChild.innerHTML);
+ console.log(parent.lastElementChild.innerHTML);
+
+ const dayone=document.querySelector('.day')
+ console.log(dayone)
+ console.log(dayone.parentElement)
+ console.log(dayone.nextElementSibling)
+ console.log(parent.childNodes)
+  // html count only one line break
+
+</script>
+</html>
