@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>querySelector vs querySelectorAll</title>
+</head>
+<body>
+
+  <h1>My List</h1>
+  <ul>
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <p id="demo"></p>
+
+  <script>
+    // Using querySelector()
+    const firstItem = document.querySelector(".item");      // it return only first item 
+    console.log("querySelector:", firstItem); // Outputs: <li class="item">Item 1</li>
+
+    // Using querySelectorAll()
+    const allItems =  document.querySelectorAll(".item"); // return in nodelist
+    console.log("querySelectorAll:", allItems); // Outputs: NodeList(3) [li.item, li.item, li.item]
+
+    // Accessing each item from NodeList
+    allItems.forEach((el, index) => {
+      console.log(`Item ${index + 1}:`, el.textContent);
+    });
+
+    // Example output to page
+    document.getElementById("demo").textContent = `First item: ${firstItem.textContent}`;
+  </script>
+
+</body>
+</html>
